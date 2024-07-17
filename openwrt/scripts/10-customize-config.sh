@@ -13,6 +13,9 @@ if curl -s "https://$mirror/openwrt/23-config-common" | grep -q "^CONFIG_PACKAGE
     mv metacubexd-gh-pages files/etc/mihomo/run/ui/metacubexd
 fi
 
+# ddns-go
+git clone https://$github/sirpdboy/luci-app-ddns-go package/new/ddns-go
+
 # change geodata
 rm -rf package/new/helloworld/v2ray-geodata
 git clone https://$github/sbwml/v2ray-geodata package/new/helloworld/v2ray-geodata
